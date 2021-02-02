@@ -12,7 +12,6 @@ export class AppComponent implements OnInit {
   users: any;
 
   constructor(private http: HttpClient){}
-
   
   ngOnInit() {
     this.getUser();
