@@ -1,0 +1,42 @@
+<h1 *ngIf="member">UserName: {{member.userName}}</h1>
+
+<div>
+    <tabset>
+        <tab heading="Info">
+            <div class="container">
+                <div class="row"  *ngIf="member">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label>Descrption</label>
+                            <textarea name="descrption" [(ngModel)]="member.introduction" class="form-control" id="description"
+                                cols="30" rows="4">{{member.introduction}}</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Looking for</label>
+                            <textarea name="lookingFor" [(ngModel)]="member.lookingFor" class="form-control" id="lookingFor"
+                                cols="30" rows="4">{{member.lookingFor}}</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>intrests</label>
+                            <textarea name="intrests" [(ngModel)]="member.intrests" class="form-control" id="intrests" cols="30"
+                                rows="4">{{member.intrests}}</textarea>
+                        </div>
+                    </div>
+                    <div class="col-6">  
+                        <div class="form-group">
+                            <label>city</label>
+                            <input type="text" class="form-control" name="city" [(ngModel)]="member.city">
+                        </div>
+                        <div class="form-group">
+                            <label>country</label>
+                            <input type="text" class="form-control" name="country" [(ngModel)]="member.country">
+                        </div>
+                        <button class="btn btn-success btn-block" (click)="updateMemberDetails()">Save Changes</button>
+                    </div>
+                </div>
+            </div>          
+            
+        </tab>
+        <tab heading="Photo">Basic content 1</tab>
+    </tabset>
+</div>
